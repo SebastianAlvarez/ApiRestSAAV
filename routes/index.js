@@ -35,7 +35,7 @@ router.get('/consulta', function(req, res, next) {
 router.get('/eliminar', function(req, res, next) {
      var myId = req.query.id3;
      console.log(myId);
-    request.delete('http://localhost:3000/musica/'+ req.query.id3, function (err, response,  data) {
+    request.delete('https://apirestsaav.herokuapp.com/musica/'+ req.query.id3, function (err, response,  data) {
        if (err) {
       res.status(404).json({
         mensaje: "No se encontro"
