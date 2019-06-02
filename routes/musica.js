@@ -118,7 +118,7 @@ router.patch('/artista/:id',function(req,res,next){
 
 router.patch('/cancion/:id',function(req,res,next){
   var item={
-    artista: req.body.artista
+    cancion: req.body.cancion
   };
   Musica.findOneAndUpdate({
      'id':req.params.id
