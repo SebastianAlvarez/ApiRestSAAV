@@ -1,0 +1,307 @@
+<div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper  teal darken-2">
+          <div class="container">
+            <a href="ihttp://localhost:3000" class="brand-logo rigth ">
+              API REST MUSIC
+              <i class="material-icons right">
+                play_circle_outline
+              </i>
+              <a href="" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">
+                  menu
+                </i>
+              </a>
+            </a>
+            <ul id="menu" class="right hide-on-med-and-down ">
+              <li class="tab"><form class="col s12" action="/musica/" method="GET">
+    <button class="btn waves-effect " type="submit"  name="action">Mostrar
+    </button>
+    </form></li>
+              <li class="tab"><a href="#Agregar">Agregar</a></li>
+              <li class="tab"><a href="#Buscar">Buscar</a></li>
+              <li class="tab"><a href="#Eliminar">Eliminar</a></li>
+              <li class="tab"><a href="#modificar">Modificar</a></li>
+            </ul> 
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav  " id="mobile-demo">
+      <li class="tab "><form class="col s12" action="/musica/" method="GET">
+    <button class="btn waves-effect " type="submit"  name="action">Mostrar
+    </button>
+    </form></li>
+      <li class="tab"><a class="section" href="#Agregar"><div class="divider"></div>Agregar</a></li>
+      <li class="tab "><a class="section" href="#Buscar"><div class="divider"></div>Buscar</a></li>
+      <li class="tab "><a class="section" href="#Eliminar"><div class="divider"></div>Eliminar</a></li>
+      <li class="tab "><a class="section" href="#modificar"><div class="divider"></div>Modificar</a></li>
+    </ul>
+    <div class="container" >
+      <div class="section">
+        <div class="arrow">
+         <div class="col s12">
+           <div class="slider">
+             <ul class="slides">
+               <li>
+                 <img src="https://cdn.pixabay.com/photo/2014/09/22/00/57/live-concert-455762_960_720.jpg" alt="">
+                 <div class="caption center-align">
+                   <h3 >Bienvenido a API REST MUSIC</h3>
+                   <h5 class="ligth"></h5>
+                 </div>
+               </li>
+               <li>
+                 <img src="https://cdn.pixabay.com/photo/2017/03/27/15/13/band-2179313_960_720.jpg" alt="">
+                 <div class="caption left-align">
+                   <h3 class="ligth "><br>EL lugar donde podras encontrar <br> tus canciones o artistas favoritos</h3>
+                 </div>
+               </li>
+               <li>
+                 <img src="https://cdn.pixabay.com/photo/2015/10/12/15/11/concert-984276_960_720.jpg" alt="">
+                 <div class="caption right-align">
+                   <h3 class="ligth"><br>Ademas de poder agregar, modificar o eliminar</h3>
+                 </div>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="divider" id="Agregar"></div>
+     <div class="section" >
+      <br>
+      <div class="row">
+       <h2 class="col s12">Agregar Datos</h2>
+       <p class="clo s12">Podras Agregar documentos </p>
+       <form class="col s12" action="/musica/" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">turned_in_not</i>
+            <input name="id" id="id" type="text" class="validate">
+            <label for="id">ID</label>
+          </div>
+          <div class="input-field col s6">
+           <i class="material-icons prefix">account_circle</i>
+           <input name="artista" id="artista" type="text" class="validate">
+           <label for="artista">Artista</label>
+         </div>
+         <div class="input-field col s6">
+           <i class="material-icons prefix">music_note</i>
+           <input name="cancion" id="cancion" type="text" class="validate">
+           <label for="cancion">Canción</label>
+         </div>
+         <div class="input-field col s6">
+          <i class="material-icons prefix">album</i>
+          <input name="album" id="album" type="text" class="validate">
+          <label for="album">Album</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">local_offer</i>
+          <input name="genero" id="genero" type="text" class="validate">
+          <label for=genero>Genero</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">calendar_today</i>
+          <input name="año" id="año" type="text" class="validate">
+          <label for=año>Año</label>
+        </div>
+         <div class="input-field col s12">
+          <i class="material-icons prefix">imagen </i>
+          <input name="imagen" id="imagen" type="text" class="validate">
+          <label for=imagen>Imagen URL</label>
+        </div>
+        <div class="col s12 ">
+          <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Enviar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="divider" id="Buscar"></div>
+<div class="section">
+  <br>
+  <div class="row">
+    <h2 class="col s12">Buscar</h2>
+    <p class="clo s12">Podras buscar algun documento pero necesitaras el Id</p>
+    <form class="col s12" action="/consulta" method="GET">
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="id2" id="id2" type="text" class="validate">
+          <label for="id2">ID</label>
+        </div>
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-light red " type="submit"  name="action">Buscar
+            <i class="material-icons right">search</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="divider" id="Eliminar"></div>
+<div class="section">
+  <br>
+  <div class="row">
+    <h2 class="col s12">Eliminar</h2>
+    <p class="clo s12">Podras eliminar algun documento pero necesitaras el Id</p>
+    <form class="col s12" action="/eliminar" method="GET">
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="id3" id="id3" type="text" class="validate">
+          <label for="id3">ID</label>
+        </div>
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-light red " type="submit"  name="action">Eliminar
+            <i class="material-icons right">delete</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="divider" id="modificar"></div>
+<div class="section">
+  <div class="row">
+    <h2 class="col s12">Modificar</h2>
+    <p class="clo s12">Podras modificar parametros individuales de un documento pero necesitaras el Id</p>
+    <div class="col s12">
+      <ul class="collapsible popout">
+        <li>
+          <div class="collapsible-header"><i class="material-icons prefix">account_circle</i>Artista</div>
+          <div class="collapsible-body">
+            <form action="" method="PATH">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="id4" type="text" class="validate">
+                  <label for="id4">ID</label>
+                </div>
+                <div class="input-field col s6">
+                 <input id="artista2" type="text" class="validate">
+                 <label for="artista2">Artista</label>
+               </div>
+               <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons prefix">music_note</i>Canción</div>
+        <div class="collapsible-body">
+          <form action="" method="PATH">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="id5" type="text" class="validate">
+                <label for="id5">ID</label>
+              </div>
+              <div class="input-field col s6">               
+                <input id="cancion2" type="text" class="validate">
+                <label for="cancion2">Canción</label>
+              </div>
+              <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons prefix">album</i>Album</div>
+        <div class="collapsible-body">
+          <form action="" method="PATH">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="id6" type="text" class="validate">
+                <label for="id6">ID</label>
+              </div>
+              <div class="input-field col s6">
+                <input  id="album2" type="text" class="validate">
+                <label for="album2">Album</label>
+              </div>
+              <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons prefix">calendar_today</i>Año</div>
+        <div class="collapsible-body">
+          <form action="" method="PATH">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="id7" type="text" class="validate">
+                <label for="id7">ID</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="año2" type="text" class="validate">
+                <label for=año2>Año</label>
+              </div>
+              <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons prefix">local_offer</i>Genero</div>
+        <div class="collapsible-body">
+          <form action="" method="PATH">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="id8" type="text" class="validate">
+                <label for="id8">ID</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="genero2" type="text" class="validate">
+                <label for=genero2>Genero</label>
+              </div>
+              <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons prefix">imagen</i>Imagen</div>
+        <div class="collapsible-body">
+          <form action="" method="PATH">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="id8" type="text" class="validate">
+                <label for="id8">ID</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="imagen2" type="text" class="validate">
+                <label for=imagen2>ImagenURL</label>
+              </div>
+              <div class="col s12 ">
+                <button class="btn waves-effect waves-light red " type="submit" method="GET" name="action">Modificar
+                  <i class="material-icons right">find_replace</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+    </ul>  
+  </div>
+</div>
+</div>
+</div>
