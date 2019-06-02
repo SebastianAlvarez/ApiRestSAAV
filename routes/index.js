@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/consulta', function(req, res, next) {
 	   var myId = req.query.id2;
 	   console.log(myId);
-	  request('http://localhost:3000/musica/'+ req.query.id2, function (err, response,  data) {
+	  request('https://apirestsaav.herokuapp.com/musica/'+ req.query.id2, function (err, response,  data) {
        if (err) {
       res.status(404).json({
         mensaje: "No se encontro"
